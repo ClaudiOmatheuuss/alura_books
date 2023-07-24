@@ -1,11 +1,13 @@
 const elementoParaInserirLivros = document.getElementById('livros')       //pega seção de livros
 
 function exibirOsLivrosNaTela(listaDeLivros){     //atribui estrutura html para cada elemento(livro) em listaDeLivros
+    
     elementoParaInserirLivros.innerHTML = ``
     listaDeLivros.forEach(livro => {
+        let disponibilidade = livro.quantidade > 0 ? 'livros__imagem' : 'livros__imagem indisponivel'
         elementoParaInserirLivros.innerHTML += `             
         <div class="livro">
-            <img class="livro__imagens" src="${livro.imagem}" alt="${livro.alt}" />
+            <img class="${disponibilidade}" src="${livro.imagem}" alt="${livro.alt}" />
             <h2 class="livro__titulo">
                 ${livro.titulo}
             </h2>
