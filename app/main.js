@@ -8,5 +8,5 @@ async function getBuscarLivrosDaAPI(){          //função assincrona:função q
     const res = await fetch(endpointDaAPI)  //espera a promise da requisição antes de seguir o fluxo
     livros = await res.json()           //espera resposta da requisição feita por res e cria um objeto
     let livrosComDesconto = aplicarDesconto(livros) //atribui função ao objeto
-    exibirOsLivrosNatela(livrosComDesconto) //exibe livros já com desconto
+    exibirOsLivrosNaTela(livrosComDesconto) //exibe livros já com desconto
 }

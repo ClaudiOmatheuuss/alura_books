@@ -1,6 +1,6 @@
 const elementoParaInserirLivros = document.getElementById('livros')       //pega seção de livros
 
-function exibirOsLivrosNatela(listaDeLivros){     //atribui estrutura html para cada elemento(livro) em listaDeLivros
+function exibirOsLivrosNaTela(listaDeLivros){     //atribui estrutura html para cada elemento(livro) em listaDeLivros
     elementoParaInserirLivros.innerHTML = ``
     listaDeLivros.forEach(livro => {
         elementoParaInserirLivros.innerHTML += `             
